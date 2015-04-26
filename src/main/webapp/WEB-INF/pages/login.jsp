@@ -15,24 +15,27 @@
 <body>
 	<div>
 		<h1>Login to Web App</h1>
-		
-		<form:form id="login_form" method="POST" commandName="loginModel" action="/loginReq">
+		<div style="color:red;">${loginModel.errorMessage}</div>
+		<form:form id="login_form" method="POST" commandName="loginModel" action="/authenticate">
 			<p>
+				UserName :
 				<form:input type="text" path="userName" />
 			</p>
 			<p>
+			Password:
 				<form:input type="password" path="password" />
 			</p>
-			<%-- <p>
-				<label> <form:input type="checkbox" name="remember_me"
+			<p>
+				<label> <input type="checkbox" name="remember_me"
 						id="remember_me" path="rememberMe" /> Remember me on this
 					computer
 				</label>
-			</p> --%>
+			</p> 
 			<p>
 				<input type="submit" value="Login" />
 			</p>
 		</form:form>
+		
 	</div>
 
 	<div>

@@ -16,6 +16,12 @@
 
 	<mvc:annotation-driven />
 
+<aop:aspectj-autoproxy />
+
+<bean id="userManagementDelegate" class="com.startup.ineed.delegate.UserManagementDelegateImpl"></bean>
+<bean id="userManagementService" class="com.startup.ineed.service.UserManagementServiceImpl"></bean>
+<bean id="logAspect" class="com.startup.ineed.aspect.LoggingAspect"></bean>
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
